@@ -426,3 +426,98 @@ h3{
 .cubic-bezier { animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 /* ---------------------------------------------------------------------------------- */
+
+/* Step 4: Performance Optimized Animations */
+.performance-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.performance-tips {
+    background: #1a1a2e;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+/* WILL CHANGE - Performance hint */
+.perf-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    margin: 2rem auto;
+    border-radius: 8px;
+    will-change: transform;
+    animation: pulse 2s infinite;
+}
+
+/* GPU Accelerated Animation */
+.gpu-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #f12711, #f5af19);
+    margin: 2rem auto;
+    border-radius: 8px;
+    transform: translateZ(0); /* Force GPU acceleration */
+    animation: rotateScale 3s infinite;
+}
+
+
+/* Scroll-triggered animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animate {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Fixed Stagger Animation */
+.stagger-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.stagger-item {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 8px;
+    animation: staggerBounce 0.6s ease-out forwards;
+    opacity: 0; /* Initial state before animation */
+    transform: translateY(30px); /* Start slightly below */
+}
+
+/* NEW: Better keyframe for stagger */
+@keyframes staggerBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }

@@ -69,12 +69,14 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-front">
-                                <h2>Hover Me!</h2>
-                                <p>🤔 What's on the back?</p>
+                                <!-- <h2>Hover Me!</h2>
+                                <p>🤔 What's on the back?</p> -->
+                                <img  src="https://5.imimg.com/data5/SELLER/Default/2020/10/GN/CW/LH/38021973/men-semi-airmix-sports-shoes-500x500.jpg" alt="" height="300px" width="300px">
                             </div>
                             <div class="flip-back">
-                                <h2>🎉 Surprise!</h2>
-                                <p>You found me!</p>
+                                <!-- <h2>🎉 Surprise!</h2>
+                                <p>You found me!</p> -->
+                                <img src="https://down-my.img.susercontent.com/file/sg-11134201-7rblj-lphgztqjywbwba" alt="" height="300px" width="300px">
                             </div>
                         </div>
                     </div>
@@ -89,13 +91,15 @@
             <div class="animation-grid">
                 <div class="animation-card">
                     <h3>Bounce Animation</h3>
-                    <div class="animated-box bounce-animation"></div>
+                    <!-- <div class="animated-box bounce-animation"></div> -->
+                     <img class="animated-box bounce-animation" src="https://5.imimg.com/data5/SELLER/Default/2020/10/GN/CW/LH/38021973/men-semi-airmix-sports-shoes-500x500.jpg" alt="">
                     <p>cubic-bezier bounce effect</p>
                 </div>
 
                 <div class="animation-card">
                     <h3>Pulse Effect</h3>
-                    <div class="animated-box pulse-animation"></div>
+                    <!-- <div class="animated-box pulse-animation"></div> -->
+                    <img class="animated-box pulse-animation" src="https://5.imimg.com/data5/SELLER/Default/2020/10/GN/CW/LH/38021973/men-semi-airmix-sports-shoes-500x500.jpg" alt="">
                     <p>Scale + Color + Shadow</p>
                 </div>
 
@@ -115,7 +119,8 @@
 
                 <div class="animation-card">
                     <h3>Rotate + Scale + Hue</h3>
-                    <div class="animated-box rotate-scale"></div>
+                    <!-- <div class="animated-box rotate-scale"></div> -->
+                    <img class="animated-box rotate-scale" src="https://5.imimg.com/data5/SELLER/Default/2020/10/GN/CW/LH/38021973/men-semi-airmix-sports-shoes-500x500.jpg" alt="">
                     <p>Multiple transforms + filter</p>
                 </div>
 
@@ -146,6 +151,56 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- Add before closing body -->
+    
+    <div class="performance-section">
+        <h1>Performance & Advanced Techniques</h1>
+        <div class="animation-grid">
+            <div class="animation-card">
+                <h3>will-change Property</h3>
+                <div class="perf-box"></div>
+                <p>Hint browser for optimization</p>
+                <code>will-change: transform;</code>
+            </div>
+    
+            <div class="animation-card">
+                <h3>GPU Acceleration</h3>
+                <!-- <div class="gpu-box"></div> -->
+                <img class="gpu-box"
+                    src="https://5.imimg.com/data5/SELLER/Default/2020/10/GN/CW/LH/38021973/men-semi-airmix-sports-shoes-500x500.jpg"
+                    alt="">
+                <p>transform: translateZ(0)</p>
+            </div>
+    
+            <div class="animation-card">
+                <h3>Stagger Animation</h3>
+                <div class="stagger-container">
+                    <div class="stagger-item"></div>
+                    <div class="stagger-item"></div>
+                    <div class="stagger-item"></div>
+                    <div class="stagger-item"></div>
+                    <div class="stagger-item"></div>
+                </div>
+                <p>animation-delay on nth-child</p>
+            </div>
+        </div>
+    
+        <div class="performance-tips">
+            <h2>🎯 Pro Tips for Advanced Animations</h2>
+            <ul style="margin-top: 1rem; line-height: 1.8;">
+                <li>✅ <strong>Use transform & opacity</strong> - These are compositor-only properties (60fps)</li>
+                <li>✅ <strong>Avoid animating width/height/top/left</strong> - These cause layout recalc</li>
+                <li>✅ <strong>Use will-change sparingly</strong> - Too many can cause memory issues</li>
+                <li>✅ <strong>Use requestAnimationFrame for JS animations</strong></li>
+                <li>✅ <strong>Prefer cubic-bezier for natural motion</strong></li>
+                <li>✅ <strong>Use transform-style: preserve-3d for 3D scenes</strong></li>
+                <li>✅ <strong>Combine multiple transforms in one property</strong> - transform: translate() scale() rotate()
+                </li>
+                <li>✅ <strong>Use animation-fill-mode to control pre/post animation state</strong></li>
+                
+            </ul>
         </div>
     </div>
 </body>
